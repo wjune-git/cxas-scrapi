@@ -1,5 +1,82 @@
 # Changelog
 
+## [1.5.0](https://github.com/GoogleCloudPlatform/cxas-scrapi/compare/v1.4.1...v1.5.0) (2026-06-09)
+
+
+### Features
+
+* add voice background noise and randomized burst artifact injection ([80258b8](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/80258b8c6121c8675868637d07599eb6cae85067))
+* address PR review comments on noise injection ([7b8e84e](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/7b8e84ee2228f4d0fb480b6ea5febed599c1bc88))
+* **agents:** add CUJ standardizer agent, refactor framework detector, and compile deliverables ([49e5f55](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/49e5f558e9a6145fe064a494cb7b76b10934e107))
+* **cli:** add --overwrite flag to cxas pull ([029edb4](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/029edb495542165b4938e6de01c4dbdd36a4b471))
+* **cli:** add --overwrite flag to cxas pull ([4d14e96](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/4d14e96a7669a05fa72009c28c3bd82280b9b1f6))
+* **cli:** add --overwrite flag to cxas push ([3d0287e](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/3d0287e8458c7f75cb0639774919d91ab6dab509))
+* **cli:** add --overwrite flag to cxas push ([7b4b24e](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/7b4b24e8ae8e8bdb483b627843688bc9ae8365a1))
+* **core:** add WebSocket timeout protection, close diagnostics, and support for citations and custom payloads ([aff41c8](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/aff41c8f2cfe08e8858c24cca777ee61fd610f66))
+* **core:** add WebSocket timeout protection, close diagnostics, and support for citations and custom payloads ([ca29e81](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/ca29e81de256ee2f9ed125635d310250ba7fed64))
+* **cxas-cuj-report-generator:** enforce explicit time confirmation turns in voice prompts ([f3c360e](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/f3c360e9c1472d77c6c0975d5570bdce0d13b4bd))
+* **cxas-cuj-report-generator:** enforce spelled-out verbal forms for times in voice responses ([2f7ae2f](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/2f7ae2f59fda9ead086dc97290b2f19bd8a02ab3))
+* **cxas-cuj-report-generator:** implement batch grading, prompt optimizer, and TESTING manual ([f822537](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/f8225370bbc9d9418c3947487fbd2fa68b5246e7))
+* **cxas-cuj-report-generator:** integrate graph traversal rules, voice realism guidelines, and naturalness standards ([3a0eecd](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/3a0eecd98e906139b06b10c404db2a0fb56d8f00))
+* **cxas-cuj-report-generator:** mandate root-level call fields, generic fallback greetings, and sign-offs ([5853b19](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/5853b1940d8d1e3ba098789173507ce42bbc7ae8))
+* **cxas-cuj-report-generator:** mandate spelled-out forms for percentages, order IDs, and reward counts ([b777c50](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/b777c50f39e10d5cabc10bf8742a8496839a9543))
+* **cxas-cuj-report-generator:** require polite voice markers on every agent turn ([7ae2c77](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/7ae2c778ce0e0047f6ff3f9689d12a7eeec7e3e2))
+* **cxas-cuj-report-generator:** standardize sign-off phrasing to Dining Service goodbye ([3df284b](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/3df284b5575055864942e9de529459fc0372fb8e))
+* fix smaple names ([2bf98d8](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/2bf98d886c07a41106e6f83445f6a38a9caa91d2))
+* include global instructions and dynamic DIs to llm-lint ([7ed70b3](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/7ed70b3c3f0efbfd3ee36593e85875bf4a52dac1))
+* **ingestor:** enforce first-turn description validation in append_turn.py ([12487f9](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/12487f91dd735035a549d9c869fcdfe34d355823))
+* **llm-lint:** expand semantic linter with red-teaming & robustness scenarios ([2b1b988](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/2b1b988def73fa82f53b75a8a91e543a5a46f88c))
+* **llm-lint:** expand semantic linter with red-teaming & robustness scenarios ([9e7768a](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/9e7768a727983aa95ea7d0b96b5894c0f03e7618))
+* make use_tool_fakes as a flag when running evaluations ([3138fcb](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/3138fcb35374aaafc9bc12f4fd3bb3da2b87abfc))
+* **migration:** emit tabbed HTML analysis report on every migration ([#207](https://github.com/GoogleCloudPlatform/cxas-scrapi/issues/207)) ([85bebc1](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/85bebc1e51c1e6362e689fbdb0cb77b94fb1df35))
+* **migration:** Grouping Review tab in analysis report (read-only) ([#227](https://github.com/GoogleCloudPlatform/cxas-scrapi/issues/227)) ([58c49da](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/58c49da21d664b9a9545233672d597dde0c8c9e2))
+* move llm-lint from a skill to a package prompt and register as a cxas CLI subcommand ([9f36128](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/9f3612820e431a2bf72ea74e78853d06d169ff0e))
+* **prompts:** add rules for quotes vs back-ticks and variable formatting to llm-lint ([8d00356](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/8d003561ed795422c3e03198277e630f65462a3d))
+* **report-generator:** integrate export transcripts to JSON feature in HTML report UI ([9e5b8ad](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/9e5b8adf392c9ba45375b7b8483b0fa7b8ee4898))
+* **supervisor:** implement ingestor supervisor and dynamic batch execution daemon ([827bc5e](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/827bc5e912f40f8189c1be5852424a35feffa311))
+* **trace:** add 'cxas trace search' for full-text conversation search ([536fdb6](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/536fdb673ad03f1c5212f60f26d8173f4465f51c)), closes [#236](https://github.com/GoogleCloudPlatform/cxas-scrapi/issues/236)
+
+
+### Bug Fixes
+
+* add background_noise_file nd additional args ([1ea3e57](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/1ea3e57998bd957aac6573f1c9bdce1abd09d6fd))
+* add background_noise_file nd additional args ([3dd61b1](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/3dd61b14bd07cf54a6731eef8cb9cd70e90a357e))
+* add pre-commit hook to block brand names ([0b79d39](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/0b79d3968dd3be4fa514967e6728948b923bb481))
+* add pre-commit hook to block brand names ([3f01d47](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/3f01d47db94de0b36dd387983e215fb923193621))
+* add unit tests ([1925fc3](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/1925fc38475a0e0a8d504acaf725120ae18ec87b))
+* address final E501 line length errors in voice noise PR ([a17c288](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/a17c28876109122050bf57a5effeca3c32d9e29a))
+* address lint failures and update unit test assertions ([80a5468](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/80a5468cf71ec878120631536e4aab86b119429b))
+* clean up example colab ([06d1079](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/06d1079430fcb01d7a669089adf035e039737db8))
+* clean up example colab ([2c68e53](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/2c68e53a93b6f073239fefc592faed9c49aff471))
+* clear uv and venv ambiguity ([013cafe](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/013cafe7ed0e4fae0dff4fa9af6660865b0b9124))
+* **cli:** fix line too long in help text ([fc3e1b3](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/fc3e1b3777ab9c922ed55f592a4ce24ea4f61821))
+* consolidate the detailed trace to populate the json for html ren… ([8f66b86](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/8f66b8617d1070bfca5e97a07263c0b373f6b951))
+* consolidate the detailed trace to populate the json for html rendering ([b3f965a](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/b3f965a8c4d8adac0557042ce365ecb0b24df198))
+* **eval-utils:** Propagate credentials to internal Evaluations client ([4054594](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/4054594b9f4337a517e33d604afc83560fd16fa8))
+* **eval-utils:** Propagate credentials to internal Evaluations client ([c9ffa16](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/c9ffa16f4a93db4ac279c61d127a124be03d7955))
+* failing test due to merge conflict ([30240bc](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/30240bcd866f7ad85a2ca711b8720a8cf31b37d3))
+* fix goal progress status on session end in SimulationEvals ([79c2ca8](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/79c2ca85a2e60d87b85e53a3f4ed503f5f4faef1))
+* fix smaple names ([c0a3c88](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/c0a3c8885d505126ce97f36d2c3d77d27ba5fd1d))
+* formatting ([32ce5ee](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/32ce5eee198663cbb1ee2a3fd83ec2aaed1faa8b))
+* lint issue ([5c4c7cd](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/5c4c7cdae5884e1a9e9489854f0d4dde5462989f))
+* **lint:** update I014 to check for {current_date} instead of ${current_date} ([13a203b](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/13a203bfbb29d26858a6a269cddda684f88de60d))
+* make use_tool_fakes as a flag when running evaluations ([933edc9](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/933edc9ed615ac596e36d183d844b871ec40326a))
+* prefer always using 'uv run' for 'cxas' commands. ([835e63f](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/835e63fcf6d2f4b1909fa5d72a345620c3df7658))
+* reformat files based on ruff check ([478c7f8](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/478c7f8cc6d546f84089fde1445f32d20e4aaf7b))
+* **skills:** pass resource name instead of display name in sync-callb… ([f904f76](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/f904f7691f463f90b40fa466e8a896d6f278cd76))
+
+
+### Reverts
+
+* undo changes to sync-callbacks.py ([c9f543f](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/c9f543f0969f4c9b247a21abd9e9dd232f1808df))
+
+
+### Documentation
+
+* add type hints and docstrings for noise injection params in reporting ([b671ada](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/b671ada2a6819f33f1f2a1aa338845ffe0c29851))
+* **cxas-cuj-report-generator:** align testing documentation with new python evaluation pipeline ([e38fad2](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/e38fad218ab392078fe0091454f9ef26af076142))
+* fix app-dir argument typo in linting guide ([4bcf4bb](https://github.com/GoogleCloudPlatform/cxas-scrapi/commit/4bcf4bb089b6057dd4d30cd938ecb4f00d177dc9))
+
 ## [1.4.1](https://github.com/GoogleCloudPlatform/cxas-scrapi/compare/v1.4.0...v1.4.1) (2026-05-29)
 
 
